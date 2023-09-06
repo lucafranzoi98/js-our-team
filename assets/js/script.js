@@ -12,6 +12,11 @@ for (let i = 0; i < team.length; i++) {
    const member = team[i];
    
    for (const key in member) {
-      divEl.insertAdjacentHTML("beforeend", `<div>${member[key]}</div>`);
+
+      if (key == "foto") {
+         divEl.insertAdjacentHTML("beforeend", `<img src="${member[key]}">`);
+      } else {
+         divEl.insertAdjacentHTML("beforeend", `<div>${member[key]}</div>`);
+      }
    }
 }
