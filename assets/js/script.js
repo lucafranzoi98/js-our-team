@@ -1,3 +1,4 @@
+const divEl = document.querySelector("div");
 const team = [
    {nome: "Wayne Barnett", ruolo: "Founder & CEO", foto: "./assets/img/wayne-barnett-founder-ceo.jpg"},
    {nome: "Angela Caroll", ruolo: "Chief Editor", foto: "./assets/img/angela-caroll-chief-editor.jpg"},
@@ -11,6 +12,6 @@ for (let i = 0; i < team.length; i++) {
    const member = team[i];
    
    for (const key in member) {
-      console.log(member[key]);
+      divEl.insertAdjacentHTML("beforeend", `<div>${member[key]}</div>`);
    }
 }
