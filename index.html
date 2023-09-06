@@ -9,7 +9,31 @@
 </head>
 <body class="bg-dark">
 
-   <h1 class="text-white text-center mt-3">Our Team</h1>
+   <h1 class="text-white text-center my-3">Our Team</h1>
+
+   <div class="container" id="form">
+      <div class="d-flex">
+         <div>
+            <input type="text" class="form-control" id="nameInput" placeholder="Name">
+         </div>
+         <div class="mx-3">
+            <input type="text" class="form-control" id="surnameInput" placeholder="Surname">
+         </div>
+         <div>
+            <input type="text" class="form-control" id="ruoloInput" placeholder="Job">
+         </div>         
+      </div>
+      <div class="d-flex align-items-end">
+         <div class="me-3">
+            <label for="formFile" class="form-label"></label>
+            <input class="form-control" type="file" id="formFile">
+         </div>
+         <button type="submit" class="btn btn-primary h-50">Add team member</button>
+      </div>
+    
+   </div>
+   
+
    <div class="container">
       <div class="row g-4 my-3">
          

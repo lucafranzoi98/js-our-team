@@ -12,7 +12,7 @@ const rowEl = document.querySelector(".row");
 for (let i = 0; i < team.length; i++) {
    const member = team[i];
    const markupEl =
-   `<div class="col-12 col-md-4">
+   `<div class="col-12 col-md-3">
       <div class="card border-0 shadow">
          <img src="${member["foto"]}" class="card-img-top">
          <div class="card-body">
@@ -22,6 +22,5 @@ for (let i = 0; i < team.length; i++) {
       </div>
    </div>`;
    rowEl.insertAdjacentHTML("beforeend", markupEl)
-
 }
 
