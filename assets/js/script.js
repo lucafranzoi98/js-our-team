@@ -29,7 +29,7 @@ for (let i = 0; i < team.length; i++) {
 const buttonEl = document.querySelector("button");
 
 // Constant used to change dynamically the image of new members in Lorem Picsum
-let i = 1;
+let j = 1;
 
 buttonEl.addEventListener("click", function(e){
 
@@ -37,8 +37,16 @@ buttonEl.addEventListener("click", function(e){
    const newName = document.getElementById("nameInput");
    const newSurname = document.getElementById("surnameInput");
    const newJob = document.getElementById("ruoloInput");
-   const newImg = `https://picsum.photos/400/429?random=${i}`;
+   const newImg = `https://picsum.photos/400/429?random=${j}`;
 
+   const newMember = {
+      nome: newName.value + " " + newSurname.value,
+      ruolo: newJob.value,
+      foto: newImg,
+   };
+
+   team.push(newMember);
+   
    // Control if the form is empty
    if (newName.value != "" && newSurname.value != "" && newJob.value != "") {
       const markupEl =
@@ -58,8 +66,8 @@ buttonEl.addEventListener("click", function(e){
       newSurname.value = "";
       newJob.value = "";
 
-      // Increment i to change image
-      i++;
+      // Increment j to change image
+      j++;
    } else {
       alert("Fill all the fields!")
    }
